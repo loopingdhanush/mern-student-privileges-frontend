@@ -211,12 +211,12 @@ export default function Privileges(){
     const [selectedItem, setSelectedItem] = useState(null);
 
     return(
-        <div className='p-4 flex flex-row justify-center flex-wrap'>
+        <div className='p-4 flex flex-row justify-center flex-wrap  '>
             
             {privileges.map((item) => (
                 <div>
                       <div className='my-2 mx-2 overflow-hidden bg-gray-00 flex flex-row rounded-xl border border-gray-200
-                      hover:outline hover:outline-2 hover:outline-gray-400 group select-none cursor-pointer'
+                      hover:outline hover:outline-2 hover:outline-gray-400 group select-none cursor-pointer animate-fadeIn'
                       onClick={() => setSelectedItem(item)}>
 
                       <div className="w-24 shrink-0 flex justify-center items-center bg-gray-200">
@@ -228,6 +228,7 @@ export default function Privileges(){
                           <p className='text-sm mt-1 w-fit text-gray-1k font-semibold rounded-lg px-2 py-1 border border-gray-300 shadow-sm geist'>{item.category}</p>
                           <p className='text-sm mt-1 text-gray-1k line-clamp-2 geist'>{item.description}</p>
                           <p className='absolute p-1 px-2 bottom-0 right-0 text-gray-300 group-hover:text-gray-800 transition-colors duration-200 rounded-tl-lg'>➤</p>
+                          <p className='text-xs text-gray-400 mt-2 geist'>Last Verified: {item.lastVerified}</p>
                       </div>
       
                       </div>
@@ -235,8 +236,8 @@ export default function Privileges(){
             ))}
 
             {selectedItem && (
-                <div className='fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center z-50' onClick={() => setSelectedItem(null)}>
-                  <div className='bg-white rounded-lg shadow-lg max-w-md w-full relative mx-4 overflow-hidden'>
+                <div className='fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center z-50 animate-fadeIn' onClick={() => setSelectedItem(null)}>
+                  <div className='bg-white rounded-lg shadow-lg max-w-md w-full relative mx-4 overflow-hidden animate-fadeIn '>
 
                     <div className="bg-gray-100 p-4 ">
                       <img className='h-16 w-16 object-contain' src={selectedItem.logoUrl}/>
@@ -259,7 +260,7 @@ export default function Privileges(){
                           <a href={link} className='text-sm text-gray-500 mb-1'>{link}</a>
                         ))}
                       </ul>
-                      <p className='text-xs text-gray-400 mt-4'>Last Verified: {selectedItem.lastVerified}</p>
+                      <p className='text-xs text-gray-400 mt-2 mb-2'>Last Verified: {selectedItem.lastVerified}</p>
                       
                     </div>
               

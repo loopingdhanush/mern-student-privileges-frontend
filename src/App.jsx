@@ -2,7 +2,7 @@ import React from "react";
 import {Route, Routes} from "react-router-dom";
 
 import Navbar from "./components/Navbar";
-import landing from "./pages/landing";
+import Landing from "./pages/landing";
 import Privileges from "./pages/privileges";
 
 
@@ -13,6 +13,7 @@ export default function App() {
         <Navbar />
         <span className=""></span>
         <Routes>
+          <Route path="/" element={<Landing />} />
           <Route path="/privileges" element={<Privileges />} />
         </Routes>
       </div>
