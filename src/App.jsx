@@ -1,0 +1,21 @@
+import React from "react";
+import {Route, Routes} from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+import landing from "./pages/landing";
+import Privileges from "./pages/privileges";
+
+
+export default function App() {
+  return (
+    <div className=" min-h-screen p-1">
+      <div className="max-w-6xl mx-auto pt-16">
+        <Navbar />
+        <span className=""></span>
+        <Routes>
+          <Route path="/privileges" element={<Privileges />} />
+        </Routes>
+      </div>
+    </div>
+  );
+}
