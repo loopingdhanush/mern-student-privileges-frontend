@@ -225,9 +225,9 @@ export default function Privileges(){
 
                       <div className='p-4 flex flex-col w-[250px] relative'>
                           <h1 className='font-bold text-md truncate geist'>{item.title}</h1>
-                          <p className='text-sm mt-1 w-fit text-gray-1k font-semibold rounded-lg px-2 py-1 border border-gray-300 shadow-sm geist'>{item.category}</p>
+                          <p className='text-xs mt-1 w-fit text-gray-1k font-semibold rounded-xl px-2 py-1 border border-gray-300 shadow-sm geist'>{item.category}</p>
                           <p className='text-sm mt-1 text-gray-1k line-clamp-2 geist'>{item.description}</p>
-                          <p className='absolute p-1 px-2 bottom-0 right-0 text-gray-300 group-hover:text-gray-800 transition-colors duration-200 rounded-tl-lg'>➤</p>
+                          <p className='absolute p-1 px-2 bottom-2 right-2 text-gray-300 group-hover:text-gray-800 transition-colors duration-200 rounded-tl-lg'>➤</p>
                           <p className='text-xs text-gray-400 mt-2 geist'>Last Verified: {item.lastVerified}</p>
                       </div>
       
@@ -237,7 +237,7 @@ export default function Privileges(){
 
             {selectedItem && (
                 <div className='fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center z-50 animate-fadeIn' onClick={() => setSelectedItem(null)}>
-                  <div className='bg-white rounded-lg shadow-lg max-w-md w-full relative mx-4 overflow-hidden animate-fadeIn '>
+                  <div className='bg-white rounded-lg shadow-lg max-w-md w-full relative mx-4 overflow-hidden animate-fadeIn'  onClick={(e) => e.stopPropagation()}>
 
                     <div className="bg-gray-100 p-4 ">
                       <img className='h-16 w-16 object-contain' src={selectedItem.logoUrl}/>
