@@ -211,7 +211,7 @@ export default function Privileges(){
     const [selectedItem, setSelectedItem] = useState(null);
 
     return(
-        <div className='p-4 flex flex-row justify-center flex-wrap  '>
+        <div className='p-4 flex flex-row justify-center flex-wrap pt-16'>
             
             {privileges.map((item) => (
                 <div>

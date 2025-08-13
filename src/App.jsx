@@ -8,8 +8,8 @@ import Privileges from "./pages/privileges";
 
 export default function App() {
   return (
-    <div className=" min-h-screen p-1">
-      <div className="max-w-6xl mx-auto pt-16">
+    <div className=" min-h-screen p-1 bg-gradient-to-b">
+      <div className="max-w-6xl mx-auto">
         <Navbar />
         <span className=""></span>
         <Routes>
